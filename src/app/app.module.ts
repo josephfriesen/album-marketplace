@@ -1,14 +1,46 @@
 import { BrowserModule } from '@angular/platform-browser';
+import { FormsModule } from '@angular/forms';
 import { NgModule } from '@angular/core';
+import { HttpModule } from '@angular/http';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { AngularFireModule } from 'angularfire2';
+import { AngularFireDatabaseModule } from 'angularfire2/database';
 
 import { AppComponent } from './app.component';
+import { WelcomeComponent } from './welcome/welcome.component';
+import { routing } from './app.routing';
+import { AboutComponent } from './about/about.component';
+import { MarketplaceComponent } from './marketplace/marketplace.component';
+import { AlbumDetailComponent } from './album-detail/album-detail.component';
+import { masterFirebaseConfig } from './api-keys';
+import { AdminComponent } from './admin/admin.component';
+import { EditAlbumComponent } from './edit-album/edit-album.component';
+
+export const firebaseConfig = {
+  apiKey: masterFirebaseConfig.apiKey,
+  authDomain: masterFirebaseConfig.authDomain,
+  databaseURL: masterFirebaseConfig.databaseURL,
+  storageBucket: masterFirebaseConfig.storageBucket
+};
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    WelcomeComponent,
+    AboutComponent,
+    MarketplaceComponent,
+    AlbumDetailComponent,
+    AdminComponent,
+    EditAlbumComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    FormsModule,
+    HttpModule,
+    routing,
+    NgbModule.forRoot(),
+    AngularFireModule.initializeApp(firebaseConfig),
+    AngularFireDatabaseModule
   ],
   providers: [],
   bootstrap: [AppComponent]
