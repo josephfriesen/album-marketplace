@@ -8,7 +8,7 @@ This is a tutorial project for the purpose of becoming familiar with Angular, pa
 
 ## Screenshots
 
-[Screenshot](./src/assets/screenshot.png)
+![Screenshot](./src/assets/screenshot.png)
 
 ## Technologies Employed
 
