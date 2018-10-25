@@ -24,7 +24,7 @@ This is a tutorial project for the purpose of becoming familiar with Angular, pa
 ```
 $ cd ~/desktop
 $ git clone https://github.com/josephfriesen/album-marketplace.git
-$ cd nba-roster
+$ cd album-marketplace
 ```
 * *Build:*
   * In terminal, enter
